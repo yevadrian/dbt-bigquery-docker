@@ -1,0 +1,9 @@
+yellow_tripdata:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      dataset: yellow_tripdata
+      threads: 4
+      keyfile: 'service-account.json'

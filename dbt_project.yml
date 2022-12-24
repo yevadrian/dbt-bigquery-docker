@@ -1,0 +1,10 @@
+name: 'yellow_tripdata'
+
+version: '1.0.0'
+config-version: 2
+
+profile: 'yellow_tripdata'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
