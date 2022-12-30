@@ -30,14 +30,9 @@ git clone https://github.com/yevadrian/dbt-bigquery-docker && cd dbt-bigquery-do
 sudo docker compose up -d
 ```
 
-##### Load data from data sources to Google Cloud Storage
+##### Ingest data to Google Cloud Storage and Google BigQuery
 ```bash
-sudo docker exec -it dbt bash -c "python3 load_gcs.py"
-```
-
-##### Load data from Google Cloud Storage to Google BigQuery
-```bash
-sudo docker exec -it dbt bash -c "python3 load_bigquery.py"
+sudo docker exec -it dbt bash -c "python3 data_ingestion.py"
 ```
 
 ##### Test your dbt project connection
@@ -45,7 +40,7 @@ sudo docker exec -it dbt bash -c "python3 load_bigquery.py"
 sudo docker exec -it dbt bash -c "dbt debug"
 ```
 
-##### Load seed files to Google BigQuery
+##### Ingest seed files to Google BigQuery
 ```bash
 sudo docker exec -it dbt bash -c "dbt seed"
 ```
